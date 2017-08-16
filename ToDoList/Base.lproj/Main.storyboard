@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--To Do List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ToDoListViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,22 +29,22 @@
                                         <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7SR-fV-ryx" id="QsP-e7-FLe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXO-2U-T86">
-                                                    <rect key="frame" x="20" y="0.0" width="335" height="43"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qXO-2U-T86">
+                                                    <rect key="frame" x="20" y="0.0" width="350" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="hjI-Vu-JcM"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="qXO-2U-T86" secondAttribute="bottom" id="37G-My-3mN"/>
-                                                <constraint firstAttribute="trailing" secondItem="qXO-2U-T86" secondAttribute="trailing" constant="20" id="SFI-EE-PhM"/>
+                                                <constraint firstAttribute="trailing" secondItem="qXO-2U-T86" secondAttribute="trailing" constant="5" id="SFI-EE-PhM"/>
                                                 <constraint firstItem="qXO-2U-T86" firstAttribute="top" secondItem="QsP-e7-FLe" secondAttribute="top" id="rBD-ny-wzx"/>
                                                 <constraint firstItem="qXO-2U-T86" firstAttribute="leading" secondItem="QsP-e7-FLe" secondAttribute="leading" constant="20" id="w2V-eG-hVL"/>
                                             </constraints>

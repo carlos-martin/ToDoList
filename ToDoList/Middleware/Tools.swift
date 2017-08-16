@@ -27,7 +27,7 @@ class CurrentUser {
     }
     
     func remove(index: Int) {
-        if index <= self.todoList.count {
+        if index < self.todoList.count {
             self.todoList.remove(at: index)
             self.save()
         }

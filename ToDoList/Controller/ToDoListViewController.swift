@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ToDoListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.session = CurrentUser()
-        self.hideKeyboard()
+        //self.hideKeyboard()
         self.tableView.reloadData()
     }
 
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 }
 
 //MARK:- TableView
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -69,16 +69,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 //MARK:- TextField
-extension ViewController: UITextFieldDelegate {
+extension ToDoListViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let row = textField.tag
         if let entry = textField.text {
-            if row >= self.session.todoList.count {
-                //this is a new entry
-                self.session.add(element: entry)
+            if entry.isEmpty {
+                //the entry is empty, we have to remove the cell
+                self.session.remove(index: row)
             } else {
-                //this is an old entry
-                self.session.add(element: entry, index: row)
+                if row >= self.session.todoList.count {
+                    //this is a new entry
+                    self.session.add(element: entry)
+                } else {
+                    //this is an old entry
+                    self.session.add(element: entry, index: row)
+                }
             }
             self.tableView.reloadData()
         }
@@ -89,9 +94,9 @@ extension ViewController: UITextFieldDelegate {
 }
 
 //MARK:- Keyboard
-extension ViewController {
+extension ToDoListViewController {
     func hideKeyboard(){
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ToDoListViewController.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
     }
     
