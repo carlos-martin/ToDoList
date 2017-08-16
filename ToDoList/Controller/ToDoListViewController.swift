@@ -66,6 +66,17 @@ extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if indexPath.row < self.session.todoList.count {
+                self.session.remove(index: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            } else {
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }
+    }
+    
 }
 
 //MARK:- TextField
