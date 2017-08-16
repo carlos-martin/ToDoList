@@ -14,6 +14,7 @@
 		1A50D70E1F41A7B50088BC79 /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A50D70C1F41A7B40088BC79 /* ToDoList.xcdatamodeld */; };
 		1A50D7101F41A7B50088BC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A50D70F1F41A7B50088BC79 /* Assets.xcassets */; };
 		1A50D7131F41A7B50088BC79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A50D7111F41A7B50088BC79 /* LaunchScreen.storyboard */; };
+		1ACC3DFC1F4485340082A25B /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC3DFB1F4485340082A25B /* MoreViewController.swift */; };
 		1AF3DBF61F41E0BD000743B7 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3DBF51F41E0BD000743B7 /* Tools.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		1A50D70F1F41A7B50088BC79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A50D7121F41A7B50088BC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A50D7141F41A7B50088BC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ACC3DFB1F4485340082A25B /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		1AF3DBF51F41E0BD000743B7 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				1A50D7071F41A7B40088BC79 /* ToDoListViewController.swift */,
+				1ACC3DFB1F4485340082A25B /* MoreViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				1A50D7081F41A7B40088BC79 /* ToDoListViewController.swift in Sources */,
 				1A2E72491F41D0B100E5FE04 /* ElementViewCell.swift in Sources */,
 				1A50D70E1F41A7B50088BC79 /* ToDoList.xcdatamodeld in Sources */,
+				1ACC3DFC1F4485340082A25B /* MoreViewController.swift in Sources */,
 				1AF3DBF61F41E0BD000743B7 /* Tools.swift in Sources */,
 				1A50D7061F41A7B40088BC79 /* AppDelegate.swift in Sources */,
 			);
