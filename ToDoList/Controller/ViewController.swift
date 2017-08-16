@@ -12,14 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var todoList: [String] = ["Add persistent storage", "Remove elements from the list"]
+    var session: CurrentUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.session = CurrentUser()
         self.hideKeyboard()
-        
         self.tableView.reloadData()
     }
 
@@ -36,7 +35,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.todoList.count + 1
+        return self.session.todoList.count + 1
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -59,8 +58,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ElementCell", for: indexPath) as! ElementViewCell
         cell.textField.delegate = self
         cell.textField.tag = indexPath.row
-        if indexPath.row < self.todoList.count {
-            cell.textField.text = self.todoList[indexPath.row]
+        if indexPath.row < self.session.todoList.count {
+            cell.textField.text = self.session.todoList[indexPath.row]
         } else {
             cell.textField.placeholder = "Add new entry"
         }
@@ -74,12 +73,12 @@ extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let row = textField.tag
         if let entry = textField.text {
-            if row >= self.todoList.count {
+            if row >= self.session.todoList.count {
                 //this is a new entry
-                self.todoList.append(entry)
+                self.session.add(element: entry)
             } else {
                 //this is an old entry
-                self.todoList[row] = entry
+                self.session.add(element: entry, index: row)
             }
             self.tableView.reloadData()
         }

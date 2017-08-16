@@ -314,7 +314,7 @@
 				DEVELOPMENT_TEAM = YRTWAFKJ72;
 				INFOPLIST_FILE = "$(SRCROOT)/ToDoList/Settings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = carlos.martin.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosmartin.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -327,7 +327,7 @@
 				DEVELOPMENT_TEAM = YRTWAFKJ72;
 				INFOPLIST_FILE = "$(SRCROOT)/ToDoList/Settings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = carlos.martin.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosmartin.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
